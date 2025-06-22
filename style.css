@@ -88,3 +88,8 @@ img{
 li.task:hover img{
     opacity: 1;
 }
+
+.ok{
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
