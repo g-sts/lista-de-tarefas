@@ -6,6 +6,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', 'sans-serif';
+    outline: none;
 }
 
 body{
@@ -27,6 +28,36 @@ div#container{
     border-radius: 10px;
     padding: 20px;
 }
+
+input#input-task{
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+button#btn-add-task{
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #003329;
+    color: #fff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button#btn-add-task:hover{
+    opacity: 0.8;
+}
+
+button#btn-add-task:active{
+    opacity: 0.6;
+}
+
 
 
 img{
