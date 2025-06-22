@@ -32,10 +32,14 @@ function listarTarefas(){
             `
     } )
     listaCompleta.innerHTML = novaLi
+
+    localStorage.setItem('lista', JSON.stringify(minhaListaDeItens))
 }
 
 function tarefaConcluida(index){
     minhaListaDeItens[index].concluida = !minhaListaDeItens[index].concluida
+
+    listarTarefas()
 }
 
 function deletarItem(index){
@@ -43,5 +47,17 @@ function deletarItem(index){
 
     listarTarefas()
 }
+
+function recarregarTarefas(){
+    const tarefasDoLocalStorage = localStorage.getItem('lista')
+
+    if(tarefasDoLocalStorage){
+        minhaListaDeItens = JSON.parse(tarefasDoLocalStorage)
+    } 
+
+    listarTarefas()
+}
+
+recarregarTarefas()
 
 button.addEventListener('click', adicionarNovaTarefa )
